@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Contribution" id="Contribution">
+
+    <chapter title="So... You want to Contribute?" id="so-you-want-to-contribute">
+        <p>First of all... Thank you! I always welcome contributions to open issues or features you would like to see in a Project I maintain.</p>
+        <p>All types of contributions are encouraged and valued. See the Table of Contents (left menu) for different ways to help and details about how we handle them. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved. Our community looks forward to your contributions.</p>
+        <p>Enjoy a Project, but just don't have the time needed to contribute? That's fine! There are other ways you can help show us your support.</p>
+        <list>
+            <li>Add a Star to a Project.</li>
+            <li>Post about a Project to Social Media.</li>
+            <li>Link the Project in your README if you leverage it.</li>
+            <li>Share the Project by Word of Mouth. Reference it in a Relevant Context if it may help someone else.</li>
+        </list>
+    </chapter>
+
+    <chapter title="Code of Conduct" id="code-of-conduct">
+        <p>
+            All Projects under <a href="https://github.com/xCykrix">@xCykrix</a> are governed by the Contributor Covenant.
+            Please see <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/">https://www.contributor-covenant.org/version/2/1/code_of_conduct/</a> for additional information.
+        </p>
+        <p>Forward Questions: samuel.voeller@amethyst.live</p>
+        <p>Forward Violations: abuse+xCykrix@amethyst.live</p>
+    </chapter>
+
+    <chapter title="I have a Question" id="i-have-a-question">
+        <p>Awesome! I am always happy to help. At this time, I currently offer support via GitHub Discussions for each Project. Please reach out in the respective Project and I will follow up as soon as possible!</p>
+    </chapter>
+
+    <chapter title="I want to Contribute" id="i-want-to-contribute">
+        <chapter title="Legal Notice" id="iwtc-legal-notice">
+            <note><p>When contributing to my Projects, all content submitted must be in your legal right to submit under our license. Once submitted, the content you have provided us will not be removed from a Project unless deemed as deprecated and following due process. If content is submitted that is infringing on your rights, please create an issue in the project for review. You may also follow proper DMCA Process on the impacted intellectual property.</p></note>
+        </chapter>
+        <chapter title="Classifications" id="iwtc-classifications">
+            <p>Please see <a href="Scope-and-Sequence.topic"/> for the Project Classifications.</p>
+        </chapter>
+        <chapter title="Reporting a Bug" id="iwtc-reporting-a-bug">
+            <chapter title="Before Submitting a Bug Report" id="iwtc-rab-before-submitting-a-bug-report">
+                <p>A good bug report shouldn't leave others needing to chase you for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.</p>
+                <list>
+                    <li>Make sure that you are using the latest version.</li>
+                    <li>Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (Make sure that you have read the project's documentation. If you are looking for support, you might want to check <a anchor="i-have-a-question"/>).</li>
+                    <li>To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in our bug trackers.</li>
+                    <li>Make sure to search the internet (including Stack Overflow) to see if users outside the GitHub Community have discussed the issue.</li>
+                    <li>
+                        <p>Collect Relevant Project/OS Information to aid in investigation.</p>
+                        <list>
+                            <li>OS, Platform, and Version (Windows, Linux, macOS, x86, ARM, etc.).</li>
+                            <li>Version of the interpreter, compiler, SDK, runtime environment, package manager, etc. based on relevancy.</li>
+                            <li>Input and Output.</li>
+                            <li>Stack Traces or Error Messages.</li>
+                        </list>
+                    </li>
+                    <li>A method of reliably reproducing this issue, such as a code snippet or sample temporary GitHub repository.</li>
+                </list>
+            </chapter>
+            <chapter title="Submitting a Bug (Good) Bug Report" id="iwtc-rab-submitting-a-good-bug-report">
+                <warning>You should never report security related issues, vulnerabilities, or bugs including sensitive information to the issue tracker. Instead, please report sensitive bugs via email to <a href="mailto:abuse+xCykrix@amethyst.live">abuse+xCykrix@amethyst.live</a>.</warning>
+                <p>I use the GitHub Issue Trackers to track feature requests, bugs, and errors. If you run into issues with any Project:</p>
+                <list>
+                    <li>Open a New Issue using the respective GitHub Issue Template.</li>
+                    <li>Fill in the Template and explain the behavior you expect vs the actual behavior.</li>
+                    <li>Please provide as much context as possible and describe the reproduction steps that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case that explicitly replicates the behavior.</li>
+                </list>
+                <p>Once an Issue has been created, a team member will try to reproduce the issue with your provided steps. If there are no reproduction steps or no obvious way to reproduce the issue, the team will ask you for those steps and mark the issue as <code>State: Blocked</code>. Issues with the <code>State: Blocked</code> tag will not be addressed until they are reproduced. We do not want to guess and check which can potentially cause us more issues.</p>
+                <p>If our team is able to reproduce the issue, it will be marked <code>State: Help Wanted</code> or assigned to our team, as well as possibly other tags (such as <code>Priority: Critical</code>).</p>
+                <p>The issue will then be left to be implemented by someone like you or queued up in our backlog of requests and issues that need addressed based on Priority.</p>
+            </chapter>
+        </chapter>
+        <chapter title="Suggesting an Enhancement" id="iwtc-suggesting-an-enhancement">
+            <chapter title="Before Submitting an Enhancement Request" id="iwtc-sae-before-submitting-a-enhancement-request">
+                <p>Enhancement Requests are requests to add entirely new functionality or changes to existing functionality to best cover all use cases or needs for users of a Project.</p>
+                <list>
+                    <li>Make sure that you are using the latest version.</li>
+                    <li>Read the documentation carefully and find out if the functionality is already covered, maybe by an individual configuration.</li>
+                    <li>Perform an issue search to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.</li>
+                    <li>Find out whether your idea fits with the scope and aims of the project. It's up to you to make a use-case for the Project's developers for the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users as well as the subset of users. If you're just targeting a personal goal or very niche use-case, consider writing an add-on/plugin to extend this functionality; if applicable.</li>
+                </list>
+            </chapter>
+            <chapter title="Submitting a Bug (Good) Enhancement Request" id="iwtc-sae-submitting-a-good-enhancement-request">
+                <p>I use the GitHub Issue Trackers to track feature requests, bugs, and errors. If you run into issues with any Project:</p>
+                <list>
+                    <li>Open a New Issue using the respective GitHub Issue Template.</li>
+                    <li>Fill in the Template and explain the behavior you expect vs the actual behavior.</li>
+                    <li>Please provide as much context as possible and describe the desired results with examples of how you think this may function best.</li>
+                </list>
+                <p>Once an Enhancement Request has been created, a team member will try to review the request and triage possible workarounds or development solutions. If enough information is not available, our team will mark the issue as <code>State: Blocked</code>. Issues with the <code>State: Blocked</code> tag will not be addressed until we have enough information to proceed. We do not want to guess and check which can potentially cause us more issues or unneeded changes.</p>
+                <p>Once the review of an Enhancement Request is completed, it will be marked <code>State: Help Wanted</code> or assigned to our team, as well as possibly other tags (such as <code>Priority: Critical</code>).</p>
+                <p>The Enhancement Request will then be left to be implemented by someone like you or queued up in our backlog of requests and issues that need addressed based on Priority.</p>
+            </chapter>
+        </chapter>
+        <chapter title="First Code Contribution" id="iwtc-first-code-contribution">
+            <tip>This chapter section is current a Work in Progress!</tip>
+        </chapter>
+        <chapter title="Improving the Documentation" id="iwtc-improving-the-documentation">
+            <p>This guide is powered by JetBrains Writerside. You can download this article and close the GitHub Pages Repository to contribute changes.</p>
+            <a href="https://github.com/xCykrix/xCykrix.github.io/"/>
+            <a href="https://www.jetbrains.com/help/writerside/discover-writerside.html"/>
+        </chapter>
+    </chapter>
+</topic>

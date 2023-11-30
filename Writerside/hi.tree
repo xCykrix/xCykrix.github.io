@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="Help Instance"
+                 start-page="Home.topic">
+
+    <toc-element topic="Home.topic"/>
+    <toc-element topic="Scope-and-Sequence.topic"/>
+    <toc-element topic="Contribution.topic"/>
+    <toc-element topic="Projects.topic">
+        <toc-element topic="Maintenance.topic"/>
+        <toc-element topic="Stable.topic"/>
+        <toc-element topic="Beta.topic"/>
+        <toc-element topic="Alpha.topic"/>
+        <toc-element topic="Unstable.topic"/>
+        <toc-element topic="Planning.topic"/>
+    </toc-element>
+</instance-profile>

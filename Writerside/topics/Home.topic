@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Home" id="Home">
+
+    <chapter title="Who is The Developer" id="who-is-the-developer">
+        <p>Hello! My name is Samuel (aka xCykrix), and I am a hobbyist developer that works on projects to
+            make the average developer experience better.</p>
+        <p>I currently work in Education Tech as a Technical Support Engineer for a 'College, Career, and Life Readiness'
+            (CCLR).</p>
+    </chapter>
+
+    <chapter title="What is the Project Hub" id="what-is-project-hub">
+        <p>The 'Project Hub' is my GitHub Sites Portal used to access all developer documentation for projects under my profile at this time.</p>
+        <p>You can find a full list of available applications, libraries, and tools/utilities in the left navigation menu.</p>
+    </chapter>
+</topic>
