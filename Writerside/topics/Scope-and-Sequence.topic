@@ -5,6 +5,40 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Scope and Sequence" id="Scope-and-Sequence">
 
+    <chapter title="Project Scopes" id="project-scopes">
+        <p>One per Project. Applied based on the current state of the Project.</p>
+        <table>
+            <tr>
+                <td>Lifecycle Scope</td>
+                <td>Usage</td>
+            </tr>
+            <tr>
+                <td>Planning</td>
+                <td>Applied when a Project has entered a phase where research is being done on the implementation and pain points of others that it can ease.</td>
+            </tr>
+            <tr>
+                <td>Unstable</td>
+                <td>Applied when a Project has the first commit of code made. Unstable Projects are a Work in Progress and are not functional or operate as designed in Planning.</td>
+            </tr>
+            <tr>
+                <td>Alpha</td>
+                <td>Applied when a Project has the first usable state. Alpha Projects are a Work in Progress where a Project has implemented partial of the functionality as designed in Planning.</td>
+            </tr>
+            <tr>
+                <td>Beta</td>
+                <td>Applied when a Project has a foundational framework and a mostly usable state. Beta Projects are Work in Progress where a Project has most of the implemented most of the functionality as designed in Planning.</td>
+            </tr>
+            <tr>
+                <td>Stable</td>
+                <td>Applied when a Project has a foundational framework and a fully usable state. Stable Projects are Complete Projects that have implemented all planned functionality as designed in Planning.</td>
+            </tr>
+            <tr>
+                <td>Maintenance</td>
+                <td>Applied when a Project has entered a state where no additional work or upkeep is being made unless needed. Feature Requests and Bug Fixes will be handled on a case-by-case basis.</td>
+            </tr>
+        </table>
+    </chapter>
+
     <chapter title="Project Development Sequences" id="project-development-sequences">
         <p>Definitions of the Primary and Secondary Sequences of a Project.</p>
         <chapter title="Primary Sequences" id="pds-primary-sequences">
@@ -46,39 +80,5 @@
                 </tr>
             </table>
         </chapter>
-    </chapter>
-
-    <chapter title="Project Scopes" id="project-scopes">
-        <p>One per Project. Applied based on current state of Project.</p>
-        <table>
-            <tr>
-                <td>Lifecycle Scope</td>
-                <td>Usage</td>
-            </tr>
-            <tr>
-                <td>Planning</td>
-                <td>Applied when a Project has entered a phase where research is being done on the implementation and pain points of others that it can ease.</td>
-            </tr>
-            <tr>
-                <td>Unstable</td>
-                <td>Applied when a Project has the first commit of code made. Unstable Projects are a Work in Progress and are not functional or operate as designed in Planning.</td>
-            </tr>
-            <tr>
-                <td>Alpha</td>
-                <td>Applied when a Project has the first usable state. Alpha Projects are a Work in Progress where a Project has implemented partial of the functionality as designed in Planning.</td>
-            </tr>
-            <tr>
-                <td>Beta</td>
-                <td>Applied when a Project has a foundational framework and a mostly usable state. Beta Projects are Work in Progress where a Project has most of the implemented most of the functionality as designed in Planning.</td>
-            </tr>
-            <tr>
-                <td>Stable</td>
-                <td>Applied when a Project has a foundational framework and a fully usable state. Stable Projects are Complete Projects that have implemented all planned functionality as designed in Planning.</td>
-            </tr>
-            <tr>
-                <td>Maintenance</td>
-                <td>Applied when a Project has entered a state where no additional work or upkeep is being made unless needed. Feature Requests and Bug Fixes will be handled on a case-by-case basis.</td>
-            </tr>
-        </table>
     </chapter>
 </topic>

@@ -5,5 +5,68 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="githooked" id="githooked">
 
-    <p>Start typing here...</p>
+    <p>Manage git hooks across your project with cross-platform support and mobility. Comfortably integrates with git to allow custom scripting. Designed for Bash 4.0 or compatible. Compatible with Git SCM (Git for Windows).</p>
+
+    <table style="header-column">
+        <tr>
+            <td><a href="Scope-and-Sequence.topic" anchor="project-scopes">Scope</a></td>
+            <td>Unstable</td>
+        </tr>
+        <tr>
+            <td><a href="Scope-and-Sequence.topic" anchor="pds-primary-sequences">Primary Sequence</a></td>
+            <td>Tool</td>
+        </tr>
+        <tr>
+            <td><a href="Scope-and-Sequence.topic" anchor="pds-secondary-sequences">Secondary Sequence(s)</a></td>
+            <td>DevOps</td>
+        </tr>
+    </table>
+
+    <chapter title="Installation and Help" id="githooked-installation-and-help">
+        <p><code>githooked</code> can be installed with the following command that leverages the GitHub API. This command requires curl and wget to be installed.</p>
+        <code-block lang="bash">
+            curl -s https://api.github.com/repos/xCykrix/githooked/releases/latest \
+            | grep "browser_download_url.*" \
+            | cut -d : -f 2,3 \
+            | tr -d \" \
+            | wget -qi -
+        </code-block>
+        <p>Alternatively, you can download the <a href="https://github.com/xCykrix/githooked/releases/latest">latest release</a> of <code>githooked</code> and install it directly to your project path.</p>
+
+        <p>Usage (man page) of <code>githooked</code></p>
+        <code-block>
+            # ./githooked --help
+            githooked - Minimal application used to uniformly enforce and distribute git-hooks for development.
+
+            Usage:
+            githooked [OPTIONS] COMMAND
+            githooked [COMMAND] --help | -h
+            githooked --version | -v
+
+            Commands:
+            install    Install githooked runtime on the current path. Requires './.git/' to be present.
+            generate   Generate default githooked 'no-op' placeholder hooks.
+
+            Options:
+            --trace, -t
+            Print additional information and details.
+
+            --help, -h
+            Show this help
+
+            --version, -v
+            Show version number
+
+            Examples:
+            githooked --help
+            githooked install --help
+            githooked generate --help
+            githooked generate prepare-commit-msg pre-commit pre-push
+            githooked upgrade
+        </code-block>
+    </chapter>
+
+    <chapter title="Getting Started" id="githooked-getting-started">
+        <p><code>githooked</code> </p>
+    </chapter>
 </topic>
