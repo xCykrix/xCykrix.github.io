@@ -5,7 +5,12 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="githooked" id="githooked">
 
-    <p>Manage git hooks across your project with cross-platform support and mobility. Comfortably integrates with git to allow custom scripting. Designed for Bash 4.0 or compatible. Compatible with Git SCM (Git for Windows).</p>
+    <p>
+        Manage git hooks across your project with cross-platform support and mobility.
+        Comfortably integrates with git to allow custom scripting.
+        Designed for Bash 4.0 or compatible.
+        Compatible with Git SCM (Git for Windows).
+    </p>
 
     <table style="header-column">
         <tr>
@@ -23,7 +28,10 @@
     </table>
 
     <chapter title="Installation and Help" id="githooked-installation-and-help">
-        <p><code>githooked</code> can be installed with the following command that leverages the GitHub API. This command requires curl and wget to be installed.</p>
+        <p>
+            <code>githooked</code> can be downloaded with the following command that leverages the GitHub API.
+            This command requires curl and wget to be installed.
+        </p>
         <code-block lang="bash">
             curl -s https://api.github.com/repos/xCykrix/githooked/releases/latest \
             | grep "browser_download_url.*" \
@@ -31,11 +39,14 @@
             | tr -d \" \
             | wget -qi -
         </code-block>
-        <p>Alternatively, you can download the <a href="https://github.com/xCykrix/githooked/releases/latest">latest release</a> of <code>githooked</code> and install it directly to your project path.</p>
+        <p>
+            Alternatively, you can download the <a href="https://github.com/xCykrix/githooked/releases/latest">latest
+            release</a> of <code>githooked</code> and install it directly to your project path.
+        </p>
 
-        <p>Usage (man page) of <code>githooked</code></p>
+        <p>Usage (man page) of <code>./githooked</code></p>
         <code-block>
-            # ./githooked --help
+            $ ./githooked --help
             githooked - Minimal application used to uniformly enforce and distribute git-hooks for development.
 
             Usage:
@@ -44,8 +55,8 @@
             githooked --version | -v
 
             Commands:
-            install    Install githooked runtime on the current path. Requires './.git/' to be present.
-            generate   Generate default githooked 'no-op' placeholder hooks.
+            install Install githooked runtime on the current path. Requires './.git/' to be present.
+            generate Generate default githooked 'no-op' placeholder hooks.
 
             Options:
             --trace, -t
@@ -67,6 +78,71 @@
     </chapter>
 
     <chapter title="Getting Started" id="githooked-getting-started">
-        <p><code>githooked</code> </p>
+        <procedure>
+            <p>Installing <code>githooked</code> to a Project.</p>
+            <code-block>
+                $ ./githooked install
+                $ ./githooked generate prepare-commit-msg pre-commit pre-push
+            </code-block>
+
+            <step>Locate
+                <path>./.git-hooks/</path>
+                and open one of the generated files.
+            </step>
+            <step>Scroll to Line 14 (by default).
+                Generated scripts will be a "no operation" and can be configured to
+                run additional commands and scripts.
+            </step>
+        </procedure>
+
+        <p>
+            Example: Simple Conventional Commit (prepare-commit)
+        </p>
+        <code-block lang="bash">
+            #!/usr/bin/env bash
+
+            # Configure the hook with these options.
+            HOOK_DEBUG=0 # Set to 1 to enable debug mode. This will print additional output.
+            HOOK_DISABLE_NOTICE=0 # Set to 1 to disable the notice when the hook exits with an error code.
+
+            # Import the git-hooked wrapper to prepare the env and execute the script below.
+            . "$(dirname "$0")/_util/git-hooked.sh"
+
+            # Your script begins here.
+            # The last command to run, or explicit "exit" commands, will determine the status code to Git.
+
+            # From: https://dev.to/craicoverflow/enforcing-conventional-commits-using-git-hooks-1o5p
+            # Build the Regular Expression Options.
+            types="build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test"
+            scope_minlen=1
+            scope_maxlen=16
+            scope_regexp="[a-z0-9_.-]{${scope_minlen},${scope_maxlen}}"
+            subject_minlen=4
+            subject_maxlen=120
+            subject_regexp="[a-z0-9_. -]{${subject_minlen},${subject_maxlen}}"
+
+            # Build the Regular Expression String.
+            regexp="^(revert: )?(${types})(\(${scope_regexp}\))?!?: ${subject_regexp}[^.]{1,}$"
+
+            # Validate the commit message.
+            if [[ ! "$(head -1 $1)" =~ ${regexp} ]]; then
+            # Print the hook error message.
+            echo
+            echo "The commit message was not formatted correctly. Rejecting the commit request."
+            echo " - https://www.conventionalcommits.org/en/v1.0.0/"
+            echo " - https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional"
+            echo
+            echo " Having trouble with the format? Just not sure of how to commit correctly? https://commitlint.io/"
+            echo " Something weird happening? Use https://regexr.com/ with the following expression to validate your
+            commit."
+            echo " - Expression: /${regexp}/"
+            echo
+            exit 1
+            fi
+
+            # Print the hook success message.
+            echo "Validated 'prepare-commit-msg' hook."
+            exit 0
+        </code-block>
     </chapter>
 </topic>
